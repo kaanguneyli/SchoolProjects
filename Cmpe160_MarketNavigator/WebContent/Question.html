@@ -1,0 +1,75 @@
+<html>
+<head>
+<link href="css/question.css" type="text/css" rel="stylesheet" />
+<title>Question (teaching.codes)</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>
+					Question:
+					<code>Market Navigator (100 points)</code>
+				</h1>
+				<div>
+					Please read <a href="ReadMe.html">important information</a> first.
+				</div>
+				<div id="page1">
+					<h2>Description</h2>
+					<p>
+					In this project you are asked to find the smallest path from the market (Migros) to houses. Imagine we have a car that 
+					gets items from the market, visits each house once and returns back to the market. <b>You are required to:</b>
+					</p>
+
+					
+					<li>Complete the <code> House </code> class, which has its name and coordinates as attributes. You are required to create getters and setters for all attributes. Optionally,
+					you can create helper methods to help you solve the problem. Your getters and setters should be named like <code> getX </code> and <code> setX </code> as we conventionally do.</li>
+					<li> Complete the <code> pathFinder </code> method in <code> MarketNavigator </code> class. <b>This method should:</b>
+						<li>
+						Take filename as the parameter. You can use example files given in the project to test your code: <code> coordinates.txt </code> and <code> coordinates2.txt </code>
+						</li>
+						<li>
+						Read the contents of the file line by line, and create houses. For example the coordinates2.txt contains:
+						<code> Migros 24 32 </code>, <code> A 24 35 </code>, <code> B 28 35 </code>. With these, you should create 3 houses named 'Migros', 'A' and 'B' with the given coordinates as their x and y attributes.
+						Note that as an example Migros house should have 24 as x and 32 as y. While you calculate the distance between two houses, use their x and y coordinates.
+						</li>
+						<li>
+						<b>Do your calculation by:</b> Start from Migros house and visit each of the other houses once. At the end, return to Migros. Your returned value should be the sum of distances that you have traveled. Keep in
+						mind that you can find many different such paths, but we want the shortest one as the answer. You can see an example visualization of a path below, it starts from Migros house, visits each house once and returns back to Migros.
+						</li>
+						<li>
+						After you do the calculation return the length of the path as an integer. To do that, <b>round</b> the decimal value that you find with <code> Math.round() </code>, as already given in the code. Using different methods to do rounding may give different results. 
+						</li>
+					</li>
+					
+					<p>
+					
+					<img src="ex.png" alt="Example path"  width="800" height="400">
+					
+					</p>
+					<p>
+						<b>Notes</b>:
+						<ul>
+							<li>Do not modify anything else in the code, except the specified area.</li>
+						</ul>
+						<ul>
+							<li>Hint: Try random house permutations and select the shortest.</li>
+						</ul>
+					</p>
+				</div>
+				<div>
+					<h2>Package classification</h2>
+					This is the package classification described in <a
+						href="ReadMe.html">important information</a>.
+					<ul>
+						<li><b>Changeable</b>
+							<ul>
+								<li><code>question</code></li>
+							</ul></li
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

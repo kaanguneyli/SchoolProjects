@@ -1,0 +1,110 @@
+<html>
+<head>
+<link href="css/question.css" type="text/css" rel="stylesheet" />
+<title>Question (teaching.codes)</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>
+					Question:
+					<code>Integral of a Polynomial (100 points)</code>
+				</h1>
+				<div>
+					Please read <a href="ReadMe.html">important information</a> first.
+				</div>
+				<div id="page1">
+					<h2>Description</h2>
+					<p>
+					In this project you are going to calculate the definite integral of a polynomial using <b>Riemann Sums</b>
+
+					<p>Riemann sum is a numerical method to approximate the integral of a continuous function f(x). The method applies the following steps:</p>
+
+					<li>Divide the integration intervals to subintervals.</li>
+					<li>Approximate the area under the curve as a rectangle in each subinterval.</li>
+					<li>Sum the area of the approximated rectangles.</li>
+
+
+					<p>Thus, integrating f(x) over integral [a,b] can be mathematically formulated as:</p>
+
+					<p>
+					
+					<img src="images/riemann1.png" alt="Example path"  width="300" height="50">
+					
+					</p>
+
+					<p>Where n is an arbitrary number that denotes intervals.</p>
+					
+					A nice visualization from <a href="https://www.storyofmathematics.com/riemann-sum/"> storyofmathematics.com/riemann-sum </a> can be seen as below, here note that
+					we are approximating the area under f(x) from point a to point b using rectangles. An important point is to realize that
+					width of these rectangles are always same, and equal to a small arbitrary value, <b>DeltaX</b>, such as 0.0001, 0.001 so on. 
+					
+					</p>
+
+					<img src="images/riemann2.png" alt="Example path"  width="500" height="280">
+					
+					<p>You are required to complete the <code>Polynomial</code> class with the following UML diagram:</p>
+					
+					<img src="images/polynomial.png" alt="Example path"  width="500" height="370">
+					
+					<h2>Notes</h2>
+					
+					<li><b>Your code will be tested in the following manner. 
+					
+					<p>At first, a polynomial will be created.</p></b> 
+					
+					<p><code>Polynomial p1 = new Polynomial("x^3-x^2-3x+5")</code></p>
+					
+					<p>Given polynomial will be in this form: "ax^4+bx^3+cx^2+dx+e". It will be 4th degree equation at most.
+					The equation may or may not have all coefficients, for example it may not have a term with x^2, x^3 or so on (We can give a polynomial
+					such as "ax+b"). 
+					All terms may not be
+					in this order, for example we can give the same polynomial as "bx^3+ax^4+dx+e+cx^2". </p>
+					
+					<p>We will assume the given polynomial is in valid form. Note that this form ("ax^4+bx^3+cx^2+dx+e") does not have spaces
+					between characters, it has ^ to show degree and it does not have * character. It can have + or - between coefficients.</p>
+					
+					<p><b>Then we may change deltaX:</b></p>
+					
+					<p><code>p1.setDeltaX(0.0002)</code></p>
+					
+					<p><b>At last, we will compute the integral:</b></p>
+					
+					<p><code>p1.computeIntegral(0,10)</code></p>
+					
+					</li>
+					
+					<li> Note that computeIntegral method returns an integer, you will compute Riemann sum as a double value however you need
+					to return it as an int using type casting. As an example, you can have <code>double integration</code> in the method, holding
+					the value of Riemann sum, you should return <code>(int)integration</code>. We need to do this to get consistent results on test cases.</li>
+					
+				</div>
+				
+				<h2>Grading</h2>
+				
+				<li>Your code will be tested in different scenarios to compute the integral. You need to consider edge cases to be
+				able to get full points. You will get points from every testing scenario. Testing will be done in the manner that was explained in 
+				the previous section. Therefore if your setDeltaX method does not work, your code may fail from some of the test cases. Make sure that
+				all of your methods work.</li>
+				
+				<li>You are expected to use valueAt method in computeIntegral method.</li>
+				
+				<li>You are expected to fill the coefficients in coefficients ArrayList of Polynomial class and use it in your solution.</li>
+				
+				<div>
+					<h2>Package classification</h2>
+					This is the package classification described in <a
+						href="ReadMe.html">important information</a>.
+					<ul>
+						<li><b>Changeable</b>
+							<ul>
+								<li><code>question</code></li>
+							</ul></li
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
